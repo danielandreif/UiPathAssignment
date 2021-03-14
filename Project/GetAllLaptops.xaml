@@ -1,0 +1,197 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="LaptopList" Type="OutArgument(sd:DataTable)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1023,2290</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="494,2225" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="IfOpenedByAppBrowser" DisplayName="Use Browser Chrome: eMAG.ro - Libertate în fiecare zi" sap:VirtualizedContainerService.HintSize="452,2133" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="IfNotOpen" Version="V1" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="418,1998" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ClickType="Single" ContinueOnError="True" DisplayName="Click 'Accept'" sap:VirtualizedContainerService.HintSize="376,166" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" Timeout="1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.emag.ro/" DesignTimeRectangle="1270, 971, 280, 36" ElementType="Button" FriendlyName="'Accept'" FullSelectorArgument="&lt;webctrl aaname='Accept' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Accept' tag='BUTTON' type='' check:text='Accept' /&gt;" ImageBase64="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" InformativeScreenshot="44c26dff6fdbad101b0fdb9bedf4a31d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eMAG.ro - Libertate în fiecare zi' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Laptop, Tablete'" sap:VirtualizedContainerService.HintSize="376,166" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.emag.ro/" DesignTimeRectangle="360, 204, 240, 32" ElementType="Text" FriendlyName="'Laptop, Tablete'" FullSelectorArgument="&lt;webctrl href='/laptop-tablete-telefoane/d?ref=hdr_menu_department_1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl href='/laptop-tablete-telefoane/d?ref=hdr_menu_department_1' tag='A' type='' aaname='                                                                                                                      Laptop, Tablete &amp;amp; Telefoane                         ' check:text='Laptop, Tablete &amp;amp; Telefoane' /&gt;" ImageBase64="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" InformativeScreenshot="de73a653819f02201024beb98f0fcb17.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='eMAG.ro - Libertate în fiecare zi' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Laptopuri si accesorii'" sap:VirtualizedContainerService.HintSize="376,166" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.emag.ro/laptop-tablete-telefoane/d?ref=hdr_menu_department_1" DesignTimeRectangle="360, 304, 138, 19" ElementType="Text" FriendlyName="'Laptopuri si accesorii'" FullSelectorArgument="&lt;webctrl aaname='Laptopuri si accesorii' parentid='emg-body-overlay' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Laptopuri si accesorii' parentid='emg-body-overlay' tag='A' type='' check:text='Laptopuri si accesorii' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAI4AAAAXCAYAAADdlHeDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATCSURBVGhD7VjPSyNJFF7/jBw9ztFjrh5z8yJIwIMBGQQRvSwKwoRFltlLiAyEDUtEPYQJZKAhCAYZaJGR7SEQsjKGLBlClCgNwaFlCOTy7auuSqc76W57O5ldmanDB5ZV79Wr975+P/JTv9+HhMS/hSSORChI4kiEgiSORChI4kiEgiSORCj8uMR5aEK5aMFw2/PDfRWFStd973uB441fUFMraBjOM0PidFQsLCo4t21OFUYFmzsq2m57/weqJURellFz2/NB++QYkd806C573wucb7xGMp5Duu48898RhwI195yIIzERAhNHr5axtpVFZDGDmXgWSwdV6D2xX1Ewk62icVZEbJn26UwspaL2IGQ/KFhY5XLz6zlCGRqT6+k4P8gjKmRe7JZwfi90BtDb79/haCeDZMUmQzjPZrBQuhPrKyTZux6ukd7l9pvnmW4vIrOzr7KYZW9ldm0VUGjxvXbpmGy6Gpcx0YX2toBYgstFEsd4/VF3nNE/lrDCfMF0L2ex/eEL3xvxxeyqglPxTqOuYnPDQ6ePrcH8ewXjrzKWTJt5/J1vZP47xlHHJkcITBzjpoGa3uPrXhPpLVvAmAFk2JJCPQMjU69Lwcshsnc5TOkugdKOcojua2ibBOxB/1NBNMGCbJPx1RuUOIeI/ZzH0efH4TlP4jzidJ/k37XEugejdWt9JP7EeUS73hx+UPUyYnF6z2D96QTROAVhYIdxB128lfkisqui8ZWt6c5Ol/df+iXWlkmmJXzf0bCZyOH1J3bO39ZA/t04xMIvg3s5pkqcUTiCwwywO4iB9TSLeShdsR4NFO1vMyc6DCJHpDJYey8asyf1BiUO6VTFlz2AH3HIhmEwnPAnzijsThdBtuyywdUXHOy++bdOW7Q/MuJ/PrYG9e9iAYqVwTmmShy9fonkK2LwKi83LP05iDMWhBZ+X6egVsV69IzHfQ6jn9QblDguQfEkDuG+giSVhtmNAtKqLYMQfIlDGbF2pmBlPUt+YiWZlZDB3e62mvDxPXsLy7pjGNjgZWto/06TOCzFJopQboapfizjPCfivJmQOCYotf+tIb1HJeQlfZVC3o84rDTMpag0WGnffnd44rhmKQdcbH0OxBl3VhfK3ghxmKy9pFBtXvErVT0yyCOVLp2I5u9JvW7B4MSanDhDaAdZS583cVxs6VJ/Yt0tyoobCczy62IjofHuEDOpSuDfmyxbg/r3WxLHuChiZquMmhnAHtpqEfPxUeI80RxT1pqzN2YE6wsVes3mLV60pokgetkXGaXJi6dosu19kXRMkTi9OxR+ZT0S7wu8icODEss3+ZrklH2y1RY8o1qizJ1HYdAcf9XRvmd/P1LfQr7Yu7CaVEOnJpf96Maa43gO2+ot9wG90eg00dD5OQdGbA3k3+kQZ7yWcvbeQkkd8pFPjOK1s7yTODtlKCWvsZmhi9OM0LFcEuM4ja95+7hII+iNTSaIXvs4SuPtSv6aRuLcBMShbPomhxdEPtMHQuegd/AmDuHmcmRsbqKw57x7bBy/EI2qyzhuZeuWhqT4KYHtmSP3Z7bnb2sw/05KnEngGYQJ8a30SkwMSRyJUJDEkQiF6RBH4oeDJI5EKEjiSIRAH/8AivWJgne7EEwAAAAASUVORK5CYII=" InformativeScreenshot="0680e3e594eea7c72a197e59117672ec.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Laptop, Tablete &amp;amp; Telefoane - eMAG.ro' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Laptopuri'" sap:VirtualizedContainerService.HintSize="376,166" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.emag.ro/laptopuri-accesorii/sd?tree_ref=2&amp;ref=dep_cat_tree_15" DesignTimeRectangle="360, 328, 63, 19" ElementType="Text" FriendlyName="'Laptopuri'" FullSelectorArgument="&lt;webctrl aaname='Laptopuri' href='/laptopuri/c?tree_ref=2172&amp;amp;ref=cat_tree_91' parentid='emg-body-overlay' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Laptopuri' href='/laptopuri/c?tree_ref=2172&amp;amp;ref=cat_tree_91' parentid='emg-body-overlay' tag='A' type='' check:text='Laptopuri' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEMAAAAXCAYAAABQ1fKSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALlSURBVFhH7ZVdSJNRGMfrJui2m4iIbrvpLoroIgoiKCjqwrAuIiiLiIoipAwqsrIviQhWUqYpZuhyrbTML9Ips9GHroasKTo2v/flPtx28/T+j72nM3nnXrYpUu/FH9+dj/9znp/Pec6SeDxOmmakwRCkwRCkwRCkwRCkwRD038IY8UxRU88QRaajfIzD6B0cp10339GwtEgey6YGx/x0tqyD/MGI4vxCq83qpN236mnCH+JjCwajpddJhx81LxoYSlINo1Uiue2qgZblPqEVR0qpsNZCgdBMYs1SuZ0rN1Flex+tOfGClh8qodOl7awUMV/X7aD156vZvg35NZRT/IFGvUG2/4beQqvyypnv/rvvyTHs5TFT+QJs7oOPbJ28B7pQ0UklTT/YN/LBmu8DY3SguJHFwXoI4+I/RzWM/hEfOcf97HvMF6S9txv4IfAXQXSNVnYHg+FpulRlprzHbexbXiMGj8XiDCiS9QXDFI3FyGjppx3XjTT0J04qX7Uw4IncPttHWFzZO20YsyUGhPHmAj25JwN8Hj0Cfna3h68RgyPhnYVvWVx5DxI+9fQTVZvsfM9cvmphbLpYS3qzI2FN2jBAs1uiivJed6aKNkrmKG0RxmxjTyDMqgeNSmlNsnjwRDJKeyDRVy0MxBGhQ2nD6LC5aOsVA1kHJ3iZza6MxQID58PVmzcY4gGhUCRKR3WtCTDQGF0Tf8u5z+Wh7dfeJL0mKH08beIh5WvyvNXG98zlqwQDsPYU1c8fDIP0GiAAGicaXU3XL1p9PPGapGqgJpubJSE3R7mB4nUQG+iWy69pYNSnyhce+ZVdbAy/4fGq004rj5VlDmPtyQpamqNLEEy9U2FWenja5Gf1WcvPBBj77jTQw4YexScQwmELXprZHK4cnlaM3TN+5U8ryt/mnOR71Piiag5KSWEOPveN36io7ktmMDKRknE2NF++yaTBEKTBEJQVGP+KNBiCNBhccfoNoLt2Q0uJJYoAAAAASUVORK5CYII=" InformativeScreenshot="ae7034b902362f267a7a3e147ae8d6bd.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Laptopuri si accesorii - eMAG.ro' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Ordoneaza dupa'" sap:VirtualizedContainerService.HintSize="376,166" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.emag.ro/laptopuri/c?ref=hp_menu_quick-nav_1_1&amp;type=category" DesignTimeRectangle="717, 483, 144, 32" ElementType="Button" FriendlyName="'Ordoneaza dupa'" FullSelectorArgument="&lt;webctrl aaname='                 Ordoneaza dupa                 Cele mai popular*' idx='1' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='                 Ordoneaza dupa                 Cele mai popular*' tag='BUTTON' type='button' check:text='Ordoneaza dupa&amp;#xA;                Cele mai populare' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJQAAAAkCAYAAABv9hOhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAS0SURBVHhe7ZzfS+NYFMf3rw1CEIIEikXagSAMgi7kJcjKYlkmA9N5ULA+OA8dpMNSkYoU1gUp1IAdhg4DRQpSKN89J7lpk076y16ms7vnA9He3uTm5uZz7zkp1l8gCBoRoQStpIR6eHjAzc0Nrq+vZZNt7sausDNJRkJxRbvdxmAwUO8IwmzYFXYmKdVIKLZNZBKWhZ1hd2JGQvESJggvIemOCCWsjAglaEWEErQiQglaEaEErYhQglZEKEEr2oTq3ZbxetuEuWnB3DBhFY7QeFKVU2gcGvAaqvCDGTz18bN8dNs5K6J41lGlfzdahOo3PNi2h9qX8S0afOvNvWHrE6qJI/MAtTnC/yjWLVSvfYegpwoZ9NpN3H1VhTloEOoOJSuPcksVl2CdK9TPxHqF6qG6b8DYclHLkKb7yYVlGDj4OMO4BKsL9bmCYq6MWT51r0pwcjZs3rZdVB+j91NCDbuoHzvRPraNvFtFZ6jqEjQObfiXVbgF2m/LhP1rFUH7Au6rPB1nwXrlo9lXOz814e9G7YVtHjcQVTXgGR79/B5u/+jUj/obtldCPR7osI9FWFt8bgv2Xnl8Lh6HfR8VtxheA+/jnrXU+TImD63qxmH0RkqoqX1W135Vg5ejtGLTQ53Gp39ficYi7K8Df9ShJRgEOHG+lyqWyXk3vo55rC4UD0yhgqnzKyiTHDX0Yjnufdhq/+QgB+/zcC/Hs6D11s6ctXyM5dXVBfZRc2kgEu3zcc55NypQ0B08q5c0Ey92i6h85tezhEq2T0f96cHar9LRUR/zb1ujUB7W7UV1oVBGESdqsoQ3qWDBv4+KCws1tc9RG0bBRyvu3HMd7g6V4w71azjYoOvKmIhzSUk1eJFMjJ4VaudkqlDdcwfGpppBo41WEaobD3IXFboYk2dlcr83vFeayRszGS5S5a91+HsO8jvcHq1g1mJCpW78sK725T7mx8KEJNrhcZiYWJ3T/KgvCws1tc9RG+6nRGZ6ewTDpJUyOWa5A1S/qPpliaUy6eHqBTIxqws1bEY5VKDKE7BQ1h93qpQmLZSF0l/h2zNZXKgA5W0KEX/HN6CDSmFBoa5UgUkJZU/kihNCTUys5YWa1eeMNlioeIXUBUlV2bXgvF9eJmZ1oYgOSWPulND4lpg98d9TccizKN4nrnrwHNUlB4jDCYeaUWgc0tKfaC5mcaH4YWF8M/BYgbOxmFCpkHfpwlQhj9tOhrz+1ayQ14K/PQ55zd9pxn+IB6GPumdlCDWrzxlCccij+pNgPFDx2K4LLULRZSD46MGhJNmIP4eiZDnOZHq3lORSEmvRkmzRb+c0Ws5SAzTsofmGVjNOdinptLYcnLRVXYLFhYpynDB5pvMWKcm/OH69kFAHx8mknMJz7IHqY5ww27uJB4BwhfJQSiblH4KRfHikB4kchZIwrFPyfO4jnxHypvc5QyhiENADCYlrcbt0XP43mpSqbh1oEuq/Q9ZNW4iMHOr/iAg1gQi1GiLUBCLUaohQglZEKEErIpSgFRFK0IoIJWhFhBK0kimUfBVdeAlTv4ou/yxDWBZ2Zeo/y2C4gm3jJUw22eZt7EpSJiYllCCsigglaAT4B4LTd+DUN5PQAAAAAElFTkSuQmCC" InformativeScreenshot="6b6ae0caa8c5f74aef5c2ecfa8ed93ee.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Laptopuri - eMAG.ro' /&gt;" SearchSteps="FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="728, 489, 102, 20" ElementType="Text" FriendlyName="'Cele mai populare'" FullSelectorArgument="&lt;webctrl aaname='Cele mai populare' idx='1' parentid='main-container' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Cele mai populare' type='' parentid='main-container' tag='SPAN' check:text='Cele mai populare' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGoAAAAYCAYAAAASy2hdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAO8SURBVGhD7ZfRS+NAEMbvrw1CEBYJlAZphSCIYA/yEuTksBzGh95DBeuDPvSQHkd9KEjhPJCCBKxIRShSkEL5bja7aTYxqRGOao58UM12N7Oz89ud2X5CoVyoAJUTFaByogJUTlSAyokKUDlRASonegFqfNnAVlmHvsqgr+hglT30nmRninq7GpyebCxZ06cJpvL5vTU8rqJ6PJStf6sIqEnPgWE46NyHS58+jl8NxPuB6mNPr6HzykZalpYE6gp1ZqIxkM036D1P1EfSckDdtVAtNbCI0+iiDqtkwOCfso32rfg+Amo2QnffEmMMA6bdxnAm+xT1dg24523YFRq3psP43IZ3cwp7w6T3GNiGi/5EDn7qw90U9nyb+z2Irh4czaG/L8Xt7x25wl/fXh3dB9np+1gFW+NzMxjbjXAuHocdFy276q+Bj7GPB3K+hE1JWUjbFV9EQKX6LNd+0YFTovKy6qBL8Zlct0QsfH8tuHOHhEJQfMJKC6n7wWtQ0DsYB0G/dmHI8arz3ncT9vlYNEiDQyNxl/F3mNOVzk/QsTVoin3+nnUyEg1KvtNn+YgxTjeraN3x50WgVPv01i8HbKdNbwsfzcPBPKX7fduizwelVdGUmxBTD80Kg3stmplBpfosbGgVF4PAuecu7HVqBw5NOqit0LqUDR49UevNVFCjEwvaqiQ+/9Cup77Q+RFalgad7yJ13AEfFVV8wfG0EWk/dOFuWzDXuT06cSwbqEhAZ105lvtohiB8KXZ4HGIbdnhkzn3JDCrVZ2HD/qlU/ss9aDqdbDVmpRra97KfFIKa9UWN8mQ7Jg6KfbuSraiioBjqv/2vFyo7KA+NMqWKP8HChmhVMoK6kA2uCCgjVotjoGIb9u2gFvmcYIODCk50ipTLBJkjGPp6Hb1HhfZUPvPUxyifKtamz6JPnZinFZ5y5ilyRilAMRcoOyh+yQkXidsWrJVsoCKp79yGLlMft62mvsnFotQ3gFsOU1//qwbrLAjCBF2HJYBa5HMCKJ76qL/phYEKYhsoAornVe+HA4uKuxb8jqIiH1SK8SUVZyq+jI4mo//WkTh+kYlnY/QP6PTxIk3Fkq1ZaN7IPkXZQYka4hd9mrdKl5PT/a1MoGr76mWC0nQQX+ljUOiNTeXi4p8oB3X1MnHmzaHili5AJfqd6ad3KvonLsyE1JfucwIo0tSjixRtCMbt0nvmF9rsso8rBur/UVIwMimhRn0EFaDiKkAtVwWoQu+iAlROVIDKiQpQOVEBKhcC/gJlHgv1LzEO/QAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Nr. review-uri'" sap:VirtualizedContainerService.HintSize="376,166" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.emag.ro/laptopuri/c?ref=hp_menu_quick-nav_1_1&amp;type=category" DesignTimeRectangle="718, 642, 142, 31" ElementType="Text" FriendlyName="'Nr. review-uri'" FullSelectorArgument="&lt;webctrl aaname='Nr. review-uri' parentid='main-container' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Nr. review-uri' parentid='main-container' tag='A' type='' check:text='Nr. review-uri' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJIAAAAjCAYAAAB/7VNeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARPSURBVHhe7ZvLS1xJFIfzh2Q5i1lmmH2Y/0A3MqJoFBU0KqMgLnRQfBMf+AQdodtO2yZqTHfUjI4JEQR3iiKIoiiiCD5ARVF84pn5HfueXG9aTFcTWpzzQVNW3VtWXeu751ShPunzvaPp6WlSFBPgzuHhIT3xv/WpSIoxItIHFUmJABHpo4qkRICI9M+bHhVJMUZE+uxTkRRzRKRxFUmJABHpS7fukRRzbCJ1q0iKMV9F8qpIijki0ufXXhVJMUZE+uR5rSIpxohIY54uFUkxRkQa9bjCEun09JSKiorI5XLR9fV1sJVof3+fmpqa+Ho0uLi4iNrYTh7SXH40ItLfXZ1hi1ReXk7p6em0sLAQbI2+SENDQ9T93wn0IfCQ5vKjEZGGuzrCFqmhoYFGR0eppKSETk5OuD3aIinRQUQa9IQvUlVVFS0tLVFraysNDg5yu10kfF1TU0PDw8OUkJBALS0tt9Kgk/b2dhobG6O8vDzKysqivb09mp+fp/z8fEpJSaGMjAyamZmh2dlZlvjq6or7oUQd7X6/nz/g7OyMU29qaiolJydTY2MjHR0d8b1zc3N8z87ODl+fnJzkOq7jxdje3ua6HTzX1NRUsEb8NdoAxgwEAlRWVsZzXVlZuTWXx46IFPD8ZSTS6uoq/9Cx2BsbG9+IhEXq6emhy8vLYM+7Qb+CggI6ODjgOhYZImKCYGtriwoLC2lzc5MqKip4PIASdURF++L19fXR+Pg4y4uP1+vla5DV5/PxPRAIY0BiCLm4uMjzsCS1c59IeFZrTsA+l8eOiOR3m0UkiASwOHV1dbS7u3tLJCx8qLc7FOg3MTERrBFHn9jYWF4g65OTk0Pr6+s0MjJCvb29fB9K1IG1eIhGiCyJiYm3+rvdbhaxtraWjo+Pqa2tjZ8bMkFc9MWzYAyMZfUB94lkyWlhzeX/gIjU74pMJNSx+cYG0y4STnYovwfnQkGkyspKPv04waJDBoiLEnVgLR5EQpqxUpgdzA198LwoEckQNRG9kPasZ3Jyn0hOaUK1PVZEpKriwohEAsvLy/wGl5aW3ikS2rGfwv7HiXOhIAeiAtKNBQRBmkLqwf0ej4dLKxXZFw+Rqrm5mc7Pz7mO9GqlWESP+vp6Tn8AYxQXF1N1dbUcHJwgelmRD98Hez4V6QYR6eefnkYsEhYYbzbkuUskyIFNMzbRTpwiAWxac3NzKSkpiTfsHR0dEqGwuY6JieHSwr54EAjH7/j4eN5sp6WlsewAkSouLo4PCwBpDvs8Z3qys7a2RtnZ2ZwuMzMz+Vk7Ozv5WihpQrU9VkSkFy9+D0skRbEjIv1ZEl5qUxQ7IlLuHy9VJMUYEemXX5+pSIoxItLz356rSIoxIlL/gP7LtmKOiIRjqoqkmCIiuV1uFUkxRkQKvNeIpJgjIvkH3qtIijEiUv2rm19iKooJItJAv57aFHNEJLcrvD/+VxQ7NyId0r852RBX4/1U5wAAAABJRU5ErkJggg==" InformativeScreenshot="4a64a7723d120c09dacb58347aeb9b09.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Laptopuri - eMAG.ro' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Afisare 60 pe pagina'" sap:VirtualizedContainerService.HintSize="376,166" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.emag.ro/laptopuri/sort-reviewsdesc/c" DesignTimeRectangle="910, 483, 130, 32" ElementType="Button" FriendlyName="'Afisare 60 pe pagina'" FullSelectorArgument="&lt;webctrl aaname='                         Afisare                         60 pe p*' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='                         Afisare                         60 pe p*' tag='BUTTON' type='button' check:text='Afisare&amp;#xA;                        60 pe pagina' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIYAAAAkCAYAAABMrUJ0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARBSURBVHhe7ZvRayJXFIf71w4BWRhkIDiIUxgCElgL8yKlZaksutDkwUBmoQbWPtgHIRiKUB+CYIR1WSwFHwQZkF/Pce6MV71xd2PaJMz5YGCu17le53z3nDsJfgdBMCBiCEY2xLi7u8PNzQ2ur6/lyNDBMefY66RicMdoNEIUReoVIStwzDn2uhypGGyNSJFdOPbsQEIqBqcUIdvoDogYQoqIIRgRMQQjIoZgRMQQjIgYghERQzDyOGIsp+jWy3AdB86xg/JvE9UBzPsNeHkbDh9BG5Ol6ngJRHPMF+o8YzyCGBH6b1wEH6Z0tsWiiyBfRXceNyeXPtzzcdx4AUzf+3B+HarW82c2GmA8Uw0Ds1Efg79V4wscLsasjfJJC6b5RH8EsN8OVItYdBAcn+Hl3OqXxAzt1xasfICOIfhTjoVlofL7HnM0DhejV4XzpoWzH1y4VEacQoD2x7hrcunBu1yXFWCAmk0T307Pn0J4rxsIA29Viuy8g+ByCJVoML8NEZTiMuU4Phr9pEfjC2Ng3EKlkIxB5e69mtdygra6xnFysKwcvKCJPt0/ff58XnmXzMNG7pWnzWOOfp2yiyqlTqGGnmGK/znRGE1/V45ECp+y39dO62Ax+IZZxQYGySd+bMIrnIELBvdVe/HLMROEJQ/hJ9VM4KBaHppKqNUXLNlo3NI5lyMaf5jUqXkHlaMqett7lX1jMMsI6f8Fl30SlMbgcxLb/qW/epnLYiewUfsrbm2LYZWa6z3SbQOOH2KqmtFiXUhnV/7Wgvgf2ZAjepAUzKOI4V7oN2GCZrGM9taKi9mTMUohXblmcuHG1/75M6wcbVx5JaZHBe3P6o0J+8Yg5rctVMuU1Thr0Kq3rVgMLnfOu3Vx61bvF2Pze/ZQTT5Pbb79oruan+vYTycGk8iRyyH3ACmYg8XgFZf7UU8LQ5wdx8E37jHsGumxBQe1SKtRNZkNMU7bxj3MBvvG4KxzRDKlg1BQlRhcSlqnJMpJGWUSxq/305u4LcZmsNdijM9JiPog3XzvvvcJIDnCExv++bdLwRwuxoJuUN5HqFL4nPccSSANTyWOLkrCThkYolHQSskR9Y3XqVpP2yn7xuANslZ+eI5JxkDURbVIpc/wGP21YgzeahmCRAtptT65GAdyuBhERBu7gDZkNqf572voahufzb9jhBia9F2t9ipq+sbxapyuwNX4FGSbN3c0jvtTdzeD7B0jwvCivHqN+/x6B83TRIwhpV01dzpyr+i6D7sy7BMD/5Bcyfcv0eb7qoayiPEIcFC39gffzIPG4Ec8f51lmCUFOckmGSbjYvB+qIKOnsW0p6osk3Ex4lLnqzLiFOip5WSzFGaV5yGG8OwQMQQjIoZgRMQQjIgYghERQzBiFEN+opht7v2JovyoObtwzO/9UTPDHWwNpxQ5snNwzHUpmA0xBCFBxBAMAP8C844I24061ycAAAAASUVORK5CYII=" InformativeScreenshot="d7c721572726a30e8e1e04688171ee3c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Laptopuri - eMAG.ro' /&gt;" SearchSteps="FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="921, 489, 88, 20" ElementType="Text" FriendlyName="'60 pe pagina'" FullSelectorArgument="&lt;webctrl aaname='60 pe pagina' parentid='main-container' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='60 pe pagina' parentid='main-container' tag='SPAN' type='' check:text='60 pe pagina' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFwAAAAYCAYAAAB3JpoiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANgSURBVGhD7Zbfa9pQFMf314aCFIJcKAYxg1AIhTrISxgbZTK0MPuQginMQvPiHnwRRmA+SF6EpoyOgQ8BCch355ob80Nnt7mmtuQDgdxcc3L93nO+575CSaGUghdMKXjBlIIXTCl4wZSCF0wpeMFkBV/cY9jWoTAGdsSgf/bFBBC4HahVGYxfhgN/ISaeA2GAYC7un5iU4CHcMwXGzT3d5ZgPYVRNDINo6Pc0KBfTaPAMuL/SwD55YvS0JILPHOjHfczEME34xYD8cSxGxHwA46iL/fgLz4tE8JEJdtZH940CheyE1Qw4t9GU31Oh9hJ7AcZoyQYG+TK9s6GedmAb6tKS5CqD0fMgCgPBxIbRiOyKMQ0dN55J8UAMTPto1uIYZHtXYl0LH454h7EKJKkC1bDgUgal18/vm+fxOmRUDtXUOgK4baoGYams1sJowxJ3YSU4X4hU72Acf+DWglrrghsHnzNH0eMIH3ZDhX0nhjFcLEmFJTYK4RRWQ0ZnQvfclii+F/tVMEDzwMQo3wu2xeAsQoRxjIVLG08x+D0ljPzBXT7m9jgwZLS+RaO84FLDSnrQpAOm2bgXw3CeGOrsWssl2u5kBFcu08F9WHUdTi5DIrZkeMOmNxP8SyV69+t7SBVquDxzVlcTznfxw5htMYhg0oepUxXyLKcslaVIcG577DwxuaH5e8Gz/3MEM/6eODRodWW5PoXJjyc4z5DK23Qae+geRaJu9HC5RbLn4GLVKXvEkJMR/MTZ2CMybIvBq+SANmkVhMQSgnNL6Z/QBhzr0GkjtLa7sqG84FkRE8GnFyR0e7w6NKz/dncSwef04aoGW5RywD09FmjDKYWlNyBmzQ48dGopSzmguWlSsunyXbEtBm/sKRvia4wzHOEQZp0scMNx9U8FH39MZTRtoK1Jjyg4EVJDMqiRyLzcX7cw/CEmiOw53Ia3qZkss9NEK93wrqerjFnGJ/Fk3pQojvJuuJ7xW2OE8C715TM+p7UHsE5iwT1Ymlg7XZVDeu9mXeRtguMnbVr8/xt0aLhuQX9MwXeGi5Xz37/mn2LM4JxqSVVwFiRenP17xAsRnPebJgbpqkudsvaJFyJ4ZHmasBNWo1PMcdYS94X/K3jJg5SCF0wpeMGUghdMKXihAL8AOQIpsu2NgnQAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click '100 pe pagina'" sap:VirtualizedContainerService.HintSize="376,166" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.emag.ro/laptopuri/sort-reviewsdesc/c" DesignTimeRectangle="911, 580, 128, 31" ElementType="Text" FriendlyName="'100 pe pagina'" FullSelectorArgument="&lt;webctrl aaname='100 pe pagina' parentid='main-container' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='100 pe pagina' parentid='main-container' tag='A' type='' check:text='100 pe pagina' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIQAAAAjCAYAAABVXaLxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASjSURBVHhe7ZrfK2xrGMf3/3N07s++cINISXJBSciF/A6RXymFJMmFnxe0FeWEoyMnJ+1sErZBQrILITPDMGaG4frZ5/s47zvrnb3OaZOd2eNZ9cla6/21Zr2f9TzvWnl3e3tLm5ubJNvb3uAAXBAhZOPtGyEeHh6EN4wIIRiIEIKBCCEYiBCCgQghGIgQgoEIIRiIEIKBCCEYaCGur69FCCEkxMzszLOEWFhYoKysLHK5XMb55eVlSk1NpYSEBGpubiYIh/MYbGBggM8nJSXR1NQU3d/fG20jGa/XS4FAwLYsGtBCxPz6y5OEwCTOz89TdnY2lZSUGEKcnJxQaWkp/0W9sbExGh4e5jK0aW9v50EhSV1dHW1vb+u2kU5HRwfNzs7alkUDWoj3v71/khB4Urq6uujg4IAjgFWIubk56u7u1scQo7a2li4uLrju2tqaUXdwcFAfC6+LFuJ86/RJQiggQniEGB0dZdTx5eUlVVRUsDyICHt7e7oMckASXIQ6B9AeUuXn51NycjJHoo2NDS5T0SkjI4NSUlIoNzeX9vf3jfYA49TX13P/SF9IUePj43qsiYkJPo8+MjMz9XUhcrW0tHBZYmIixcTEUFNTE4uN84uLi1yvs7OT+vr6+DpQD6lTXQfGQGrEtaP/goICOj095bJIRgvh/+J/USHUTQOIJhAB/eOGWutiElCGOuocQB/FxcV67bG1tcXjeDweTjGtra3k9/u5bH19naqrq7/pA31jUnd2dvj46uqKysvLyeFw8LHP56NgMMj7KysrnMqwj2uHjBAPN8ca1axCYL+trU0LhlSi+gDoX62PJicnjYckUtFCBD4/77XzR0YIax8Qo6amhtviKY+NjeXJVhQVFZHb7Tb6sJNtZGSE+8V4mCREl7S0NAYTjDpIY/39/TyZAJP+X0JgUa36xngqVd7c3HCEQGTD9SFSWH9PpKKF8H583munnRB2awgI4XQ6bdcQ1roK3DxMnjoOF8KuTTioizYqygAlBFIO0omKMphkJQTqNzY2Uk5ODoM1jhI2XAi1D6xCDA0NUW9vr45AGPOnEsLz9+WLCWH3ltHT08P74W8ZCPWrq6tGnwA3z5oykBYKCwt1ysBEHR8fcxn6RXi2tgeYIGvKwKIWfSBlTE9P85OPtrgWvD0oIc7OznjNgBRj7Q98rxD4qwTAb0Cq+qmE8H3yvZgQwPodAjdXlWMw63cI6yLPCm5eQ0ODsajc3d3lMkzi0tISh3mUxcXF2d5sTBBSCdIGrgXjIU3gqYUckBHtsShEezzRaIcUV1lZqReE8fHx+nvJ9wpxdHREeXl53Ad+A/rHb1V1IxUthHf+5llC/ChwA+0m+SlgguwWrP8HPjphwaqiCjg/P+doFS59NKKFcP55JUL8A8I71h0qHQHIUVVVpdNXNKOFOPzDJUL8C9Id0gjSTHp6OpWVldHh4aFt3WgjJMRf7ogSQngdtBCuJY8IIYSEuP4cWYtK4XXQQngdARFCCAnhWpT/mBIehbi7u6N3u79LyhAsQqx+kLcMwRohZrwihBASwrn5uIaQ7W1vWgi3Q4SQ7VGIYDBIXwG1OGfHC1WjNwAAAABJRU5ErkJggg==" InformativeScreenshot="6bab29849db99a7d7691b1f93fadf329.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Laptopuri - eMAG.ro' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <Sequence sap:VirtualizedContainerService.HintSize="376,258" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NExtractData ExtractDataSettings="{x:Null}" AppendResults="False" DataTable="[LaptopList]" DisplayName="Extract Table Data" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Name' attr='text' name2='URL' attr2='href'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='h2' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Price' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='p' idx='2' /&gt;&lt;/column&gt;&lt;column exact='1' name='Reviews' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NExtractData_3" MaximumResults="100">
+                <uix:NExtractData.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="&lt;webctrl id='card_grid' tag='DIV' /&gt;" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Laptopuri - eMAG.ro' /&gt;" SearchSteps="Selector" />
+                </uix:NExtractData.Target>
+              </uix:NExtractData>
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1936, 1066" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI0SURBVDhPddNPSBRRHAfwNVdXOgRJgYfIkzC/9yQ3IkswPUgLhXhbOzmLpYf+7CH1ki6U1iUIURRaC2JdJbW8uBdXmwIVL5YErXSpzEA7tKlF4qK58/o+d9Ze0/qD721+H+Z934xDnR+8+ECcnzyxzM8GPrDKaIx53r1mNbFp5n01SXX3I9RQ/pyu5VqP/zurvOQwEohz99IyP5P8yCoFAAFATLNaMUF15hg1fhuhG70D1HTMWksNFo8iT5Hkd+4WAEQGQAAQw+QX/dQ8+ZhuHU8v5yAPEBMRCmACWJ9jNWsAkjjCHhCiFtGntT7q1jpcEvAgcbmsAFuf+LmuBeY5BcA9xS7dwxtsqEBQC6z1aHcuSGAgvSyDDsRXfnr0My8/uPuKGJTojJIvqAIPtYDo1tqfSGDxf6A0jFvQcYR6dFA/w7x6lHQJmCMK0KV1vJfApgpYRzDtJaY7wC0owN2fEkhkAGy34N0PSEjgix1Y4aUrAF4AMAAYAAwABgADgAHAAPASQEQCQyogOwDwBiUWzbPqbNyCEx04x8nnwpeYD8AFIA9AHjrYvcaLyGoa2OuAV0wtsPM+vEEZOqiaIP32GDVERulqsXU5qcFSLtKJ2D6kCtnBDoBfOEICR5CfsnhG18cH6WaBtZ4aLB5BQshvG5ChRL8IU1NvkNqc1npqsHwI8aODGIDtfYAtdPAWgN5HbdnW6t/Z4JSF37kQwBXcQgjADIB5ALMAwijxMn5n5U90OP4AxlPE6YUy1qwAAAAASUVORK5CYII=" InformativeScreenshot="89f56b1268d4b8310a9cf7a52529a7c2.png" Selector="&lt;html app='chrome.exe' title='eMAG.ro - Libertate în fiecare zi'/&gt;" Url="https://www.emag.ro/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
